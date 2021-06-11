@@ -9,7 +9,7 @@
     "server": "nodemon -r esm server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
     "client:build": "cd client && npm run build",
-    "start": "cross-env NODE_ENV=production PORT=3000 node -r esm server.js"
+    "start": "cross-env NODE_ENV=production node -r esm server.js"
   },
   "repository": {
     "type": "git",
