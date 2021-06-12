@@ -1,34 +1,42 @@
 {
-  "name": "starter-react-app",
-  "version": "1.0.0",
-  "description": "Boilerplate starter React app with Heroku deployment",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "cd client && npm start",
-    "server": "nodemon -r esm server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
-    "client:build": "cd client && npm run build",
-    "start": "cross-env NODE_ENV=production node -r esm server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Denijar/starter-react-app.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Denijar/starter-react-app/issues"
-  },
-  "homepage": "https://github.com/Denijar/starter-react-app#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "cross-env": "^7.0.3",
-    "esm": "^3.2.25",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "concurrently": "^6.2.0",
-    "nodemon": "^2.0.7"
-  }
+	"name": "starter-react-app",
+	"version": "1.0.0",
+	"description": "Boilerplate starter React app with Heroku deployment",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"client": "cd client && npm start",
+		"server": "nodemon -r esm server.js",
+		"dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
+		"client:build": "cd client && npm run build",
+		"start": "cross-env NODE_ENV=production node -r esm server.js",
+		"lint": "eslint --fix --ext .js,.jsx .",
+		"format": "prettier --write \"**/*.{js,jsx,json,md,scss,css}\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Denijar/starter-react-app.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Denijar/starter-react-app/issues"
+	},
+	"homepage": "https://github.com/Denijar/starter-react-app#readme",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"cross-env": "^7.0.3",
+		"esm": "^3.2.25",
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"concurrently": "^6.2.0",
+		"eslint": "^7.28.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"eslint-plugin-react": "^7.24.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"nodemon": "^2.0.7",
+		"prettier": "^2.3.1"
+	}
 }
