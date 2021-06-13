@@ -1,8 +1,8 @@
-import hello from "../../controllers/hello.controller";
+import hello from "../../controllers/hello.controller"
 
-const express = require("express");
-const router = express.Router();
+const express = require("express")
+const router = express.Router()
 
-router.get("/", hello);
+router.get("/", hello)
 
-export default router;
+export default router
