@@ -1,6 +1,6 @@
 # starter-react-app
 
-https://github.com/Denijar/starter-react-app/actions/workflows/build.yml/badge.svg
+![GitHub actions badge](https://github.com/Denijar/starter-react-app/actions/workflows/build.yml/badge.svg)
 
 Boilerplate starter React app with Heroku deployment
 
