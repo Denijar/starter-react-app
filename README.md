@@ -2,6 +2,8 @@
 
 ![GitHub actions badge](https://github.com/Denijar/starter-react-app/actions/workflows/build.yml/badge.svg)
 
+_**------ REPLACE WITH YOUR OWN README CONTENTS WHEN COMPLETE ------**_
+
 Boilerplate starter React app with Heroku deployment
 
 ## How to use
@@ -21,3 +23,5 @@ Boilerplate starter React app with Heroku deployment
 - Click 'Enable Automatic Deploys'
 
 Your application is now configured with automatic Heroku deployment. Any new pushes to main on your remote should automatically trigger a Heroku build.
+
+_**----- REPLACE WITH YOUR OWN README CONTENTS WHEN COMPLETE -----**_
