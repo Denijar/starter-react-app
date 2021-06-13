@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
-import styles from './app.module.scss';
-import axios from 'axios';
+import styles from "./app.module.scss";
+import axios from "axios";
 
 function App() {
-
-  const [ responseMessage, setResponseMessage ] = useState("");
+  const [responseMessage, setResponseMessage] = useState("");
 
   useEffect(() => {
-    axios.get('/api/hello').then((response) => {
+    axios.get("/api/hello").then((response) => {
       const body = response?.data?.body;
       setResponseMessage(body);
-    })
-
-  })
+    });
+  });
 
   return (
     <div className={styles.App}>

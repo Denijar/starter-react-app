@@ -9,7 +9,18 @@
     "server": "nodemon -r esm server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
     "client:build": "cd client && npm run build",
-    "start": "cross-env NODE_ENV=production node -r esm server.js"
+    "start": "cross-env NODE_ENV=production node -r esm server.js",
+    "lint": "eslint --fix --ext .js,.jsx .",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ]
   },
   "repository": {
     "type": "git",
@@ -29,6 +40,14 @@
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
-    "nodemon": "^2.0.7"
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1"
   }
 }
