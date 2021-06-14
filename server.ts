@@ -1,7 +1,7 @@
 // Import dependencies
-const express = require("express");
-const cors = require("cors");
-const path = require("path");
+import express, { NextFunction, Request, Response } from "express";
+import cors from "cors";
+import path from "path";
 
 // Import routes
 import api from "./server/routes";
@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // This application level middleware prints incoming requests to the servers console, useful to see incoming requests
-app.use((req, res, next) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
   console.log(`Request_Endpoint: ${req.method} ${req.url}`);
   next();
 });
@@ -25,16 +25,16 @@ app.use("/", api);
 app.use(cors());
 
 // This middleware informs the express application to serve our compiled React files
-if (process.env.NODE_ENV === "production" || process.env.NODE_ENV === "staging") {
-  app.use(express.static(path.join(__dirname, "client/build")));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client")));
 
-  app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  app.get("*", function (req: Request, res: Response) {
+    res.sendFile(path.join(__dirname, "client", "index.html"));
   });
 }
 
 // Catch any bad requests
-app.get("*", (req, res) => {
+app.get("*", (req: Request, res: Response) => {
   res.sendStatus(404);
 });
 

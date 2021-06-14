@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <h1>Hello from the frontend!</h1>
+      <h1>Hello from the typescript frontend!</h1>
       <h1>{responseMessage}</h1>
     </div>
   );

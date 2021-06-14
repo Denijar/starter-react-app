@@ -1,12 +1,5 @@
 module.exports = {
   root: true,
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: "module",
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
   env: {
     jest: true,
     browser: true,
@@ -17,6 +10,15 @@ module.exports = {
     "eslint:recommended",
     "plugin:prettier/recommended" // Make this the last element so prettier config overrides other formatting rules
   ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  plugins: ["@typescript-eslint"],
   rules: {
     "no-unused-vars": ["error", { vars: "all", args: "after-used", ignoreRestSiblings: false, argsIgnorePattern: "next" }],
     "prettier/prettier": ["error", {}, { usePrettierrc: true }]
