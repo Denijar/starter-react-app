@@ -29,15 +29,10 @@ jobs:
       - name: Run linter
         run: npm run lint
 
-      - name: Run server tests
-        run: npm test
-
       - name: Run client tests
         working-directory: client
         run: npm test
 
-      - name: Build server
-        run: npm run build:server
-
-      - name: Build client
-        run: npm run build:client
+      - name: Run build
+        working-directory: client
+        run: npm run build
