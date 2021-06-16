@@ -7,7 +7,7 @@
     "node": true
   },
   "extends": [
-    "eslint:recommended",
+    "airbnb-typescript",
     "plugin:prettier/recommended" // Make this the last element so prettier config overrides other formatting rules
   ],
   "parser": "@typescript-eslint/parser",
@@ -16,11 +16,11 @@
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "project": ["./tsconfig.json", "./client/tsconfig.json"]
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false, "argsIgnorePattern": "next" }],
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
   }
 }
