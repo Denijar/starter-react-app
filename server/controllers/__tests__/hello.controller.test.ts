@@ -13,9 +13,8 @@ describe("Game controller", () => {
       const res: any = {
         status
       };
-      const next = jest.fn();
 
-      hello(req, res, next);
+      hello(req, res);
 
       expect(status).toHaveBeenCalledTimes(1);
       expect(status).toHaveBeenCalledWith(200);
